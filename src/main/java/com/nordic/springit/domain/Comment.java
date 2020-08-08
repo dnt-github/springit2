@@ -2,15 +2,14 @@ package com.nordic.springit.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Data
-@RequiredArgsConstructor
 @NoArgsConstructor
 public class Comment {
 
@@ -19,5 +18,6 @@ public class Comment {
     private Long id;
     private String body;
 
-    //link
+    @ManyToOne
+    private Link link;
 }

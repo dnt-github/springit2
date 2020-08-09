@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS `springit2`;
+use `springit2`;
+
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE IF NOT EXISTS `springit2`.`comment` (
+  `id` BIGINT(20) NOT NULL,
+  `created_by` VARCHAR(255) NULL DEFAULT NULL,
+  `creation_date` DATETIME(6) NULL DEFAULT NULL,
+  `last_modified_by` VARCHAR(255) NULL DEFAULT NULL,
+  `last_modified_date` DATETIME(6) NULL DEFAULT NULL,
+  `body` VARCHAR(255) NULL DEFAULT NULL,
+  `link_id` BIGINT(20) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+DROP TABLE IF EXISTS `link`;
+CREATE TABLE IF NOT EXISTS `springit2`.`link` (
+  `id` BIGINT(20) NOT NULL,
+  `created_by` VARCHAR(255) NULL DEFAULT NULL,
+  `creation_date` DATETIME(6) NULL DEFAULT NULL,
+  `last_modified_by` VARCHAR(255) NULL DEFAULT NULL,
+  `last_modified_date` DATETIME(6) NULL DEFAULT NULL,
+  `title` VARCHAR(255) NULL DEFAULT NULL,
+  `url` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;

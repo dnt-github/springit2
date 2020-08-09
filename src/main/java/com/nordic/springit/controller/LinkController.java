@@ -35,8 +35,8 @@ public class LinkController {
     public Link update(@PathVariable Long id, @ModelAttribute Link link){
         return linkRepository.save(link);
     }
-    @DeleteMapping("/{id}")
+    /*@DeleteMapping("/{id}")
     public Link delete(@PathVariable Long id){
-        linkRepository.deleteById(id);
-    }
+        return linkRepository.deleteById(id);
+    }*/
 }
